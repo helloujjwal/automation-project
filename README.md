@@ -1,5 +1,5 @@
 # automation-project
 
 This is a practice project related to e-commerce domain
-Author - Ujjwal Singh Automation Eng.
+Author - Ujjwal Singh.
 Code - Automation Testing
