@@ -24,4 +24,5 @@ test.describe('flipkart mobile tests', () =>{
     test('Details of Apple Phones', async ({ page }) =>{
       await mobilePage.verifyApplePhoneDetails();
     })
+
 });
