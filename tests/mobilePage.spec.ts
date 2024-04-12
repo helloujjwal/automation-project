@@ -1,8 +1,8 @@
-import { test,} from '@playwright/test';
+import { test } from '@playwright/test';
 import { MobilePage } from '../pageObjects/mobilePage';
 let mobilePage: MobilePage
 
-test.describe('flipkart tests', () =>{
+test.describe('flipkart mobile tests', () =>{
     test.beforeEach(async ({ page}) =>{
         mobilePage = new MobilePage(page);
         await mobilePage.navigateToUrl();
