@@ -1,109 +1,184 @@
-import exp from "constants";
 import { Locator, Page, expect } from "playwright/test";
 
-    const pageURL = ("https://www.flipkart.com/");
+    const pageURL = ("https://www.flipkart.com/")
 
-    export class HomePage {
-        readonly page: Page;
-        readonly mobileLocator: Locator;
-        readonly samsungHeading: Locator;
-        readonly samsungPhoneLocator: Locator;
-        readonly samsungPhoneTextLocator: Locator;
-        readonly samsungPhoneRating: Locator;
-        readonly samaungPhoneNewPrice: Locator;
-        readonly samsungPhoneOldPrice: Locator;
-        readonly discountOnSamsungPhone: Locator;
-        readonly samsungviewAllButton: Locator;
-        readonly allSamsungPhonesLocator: Locator;
-        readonly appleHeadingLocator: Locator;
-        readonly applePhoneLocator: Locator;
-        readonly applePhoneTextLocator: Locator;
-        readonly applePhoneRating: Locator;
-        readonly applePhoneNewPrice: Locator;
-        readonly applePhoneOldPrice: Locator;
-        readonly discountOnApplePhone: Locator;
-        readonly appleViewAllButton: Locator;
-        readonly allApplePhoneLocator: Locator;
-
-
+    export class HomePage{
+        readonly page:  Page;
+        readonly flipkartIconLocator: Locator;
+        readonly flipkartSearchBarLocator: Locator;
+        readonly flipkartSearchMagnifierLocator: Locator;
+        readonly flipkartSearchBarTextLocator: Locator;
+        readonly flipkartLoginButtonLocator: Locator;
+        readonly flipkartLoginDropDownButtonLocator: Locator; 
+        readonly cartLogoLocator: Locator;
+        readonly cartTextLocator: Locator;
+        readonly becomeSellerIconLocator: Locator;
+        readonly becomesellerTextLocator: Locator;
+        readonly verticalDotLocator: Locator;
+        readonly categoriesLocator: Locator;
+        readonly categoriesTopicsLocator: Locator;
+        readonly electronicsTabLocator: Locator;
+        readonly rightNextButtonLocator: Locator;
+        readonly leftNextButtonLocator: Locator;
+        readonly bestDealPhoneHeadingLocator: Locator;
+        readonly bestDealViewAllButtonLocator: Locator;
+        readonly bestDealIteamsLocator: Locator;
+        readonly featuredBrandHeadingLocator: Locator;
+        readonly featuredIteamsLocator: Locator;
+        readonly smartGadgetsHeadingLocator: Locator;
+        readonly smartGadgetViewAllLocator: Locator;
+        readonly smartGadgetIteamsLocator: Locator;
+        readonly bestGiftinCollectionLocator: Locator;
+        readonly bestGiftViewAllButtonLocator: Locator;
+        readonly bestGiftIeamsLocator: Locator;
+        readonly recentlyViewedHeadingLocator: Locator;
+        readonly recentlyViewedViewAllButtonLocator: Locator;
         
+
+
+
+
 
     constructor(page: Page){
         this.page = page;
-        this.mobileLocator = page.locator("[class='_2GaeWJ'] [alt='Mobiles']")
-        this.samsungHeading = page.locator("[data-tkid*='42OTAAY8KIGZ'] h2[class='_1DYSFX']");
-        this.samsungPhoneLocator = page.locator("[class='_28_T72'] [alt*='(Stardust Silver, 256 GB)']");
-        this.samsungPhoneTextLocator = page.locator("[data-tkid*='MOBGPN55PEBUKZX2'] [class='s1Q9rs']")
-        this.samsungPhoneRating = page.locator("[id*='MOBGPN55PEBUKZX2_']"); 
-        this.samaungPhoneNewPrice = page.locator("[data-tkid*='MOBGPN55PEBUKZX2'] [class='_30jeq3']");
-        this.samsungPhoneOldPrice = page.locator("[data-tkid*='MOBGPN55PEBUKZX2'] [class='_3I9_wc']");
-        this.discountOnSamsungPhone = page.locator(" [data-tkid*='MOBGPN55PEBUKZX2'] [class='_3Ay6Sb']");
-        this.samsungviewAllButton = page.locator("[data-tkid*='42OTAAY8KIGZ'] [class='_2KpZ6l _3dESVI']");
-        this.allSamsungPhonesLocator = page.locator("[data-tracking-id='Samsung smartphones'] [class='_2hKRMr _2CfYpZ'] [class='_4ddWXP _3BCh3_']");
-        this.appleHeadingLocator = page.locator("[data-tkid*='QBM1SMZJ3K19'] [class='_1DYSFX']");
-        this.applePhoneLocator = page.locator("[data-tkid*='QBM1SMZJ3K19_MC.MOBG6VF5ADKHKXFX'] [class='CXW8mj']");
-        this.applePhoneTextLocator = page.locator("[data-tkid*='QBM1SMZJ3K19_MC.MOBG6VF5ADKHKXFX'] [class='s1Q9rs']");
-        this.applePhoneRating = page.locator("[id='productRating_LSTMOBG6VF5ADKHKXFXBT5ONJ_MOBG6VF5ADKHKXFX_']");
-        this.applePhoneNewPrice = page.locator("[data-tkid*='M_aea24faf-9391-4173-9470-0dbfdc76cbe6_68_QBM1SMZJ3K19_MC.MOBG6VF5ADKHKXFX'] [class='_30jeq3']");
-        this.applePhoneOldPrice = page.locator("[data-tkid*='M_aea24faf-9391-4173-9470-0dbfdc76cbe6_68_QBM1SMZJ3K19_MC.MOBG6VF5ADKHKXFX'] [class='_3I9_wc']");
-        this.discountOnApplePhone = page.locator("[data-tkid*='M_aea24faf-9391-4173-9470-0dbfdc76cbe6_68_QBM1SMZJ3K19_MC.MOBG6VF5ADKHKXFX'] [class='_3Ay6Sb']");
-        this.appleViewAllButton = page.locator("[data-tkid='M_aea24faf-9391-4173-9470-0dbfdc76cbe6_68_QBM1SMZJ3K19'] [class='_2KpZ6l _3dESVI']");
-        this.allApplePhoneLocator = page.locator("[data-tracking-id='Apple Smartphones'] [class='_28_T72']");
+        this.flipkartIconLocator = page.locator("[class='YLCOuy']");
+        this.flipkartSearchBarLocator = page.locator("[class='_3NorZ0 _3jeYYh']");
+        this.flipkartSearchMagnifierLocator = page.locator("[class='_3NorZ0 _3jeYYh'] [class='_2iLD__']");
+        this.flipkartSearchBarTextLocator = page.locator("[class='_2SmNnR'] [name='q']");
+        this.flipkartLoginButtonLocator = page.locator("[class='_1Us3XD'] [title='Login']");
+        this.flipkartLoginDropDownButtonLocator = page.locator("[class='_1Us3XD'] [class='-dOa_b XdYXbi']");
+        this.cartLogoLocator = page.locator("[class='_3RX0a-']")
+        this.cartTextLocator = page.locator("[title='Cart']", {hasText: 'Cart'});
+        this.becomeSellerIconLocator = page.locator("[class='_2msBFL'] [class='_3RX0a- _3jeYYh']");
+        this.becomesellerTextLocator = page.locator("[class='_2msBFL'] [title='Become a Seller']", {hasText: 'Become a Seller'});
+        this.verticalDotLocator = page.locator("[class='H6-NpN'] [title='Dropdown with more help links']");
+        this.categoriesLocator = page.locator("[id='container'] [class='_1yQHx8 _2UnIQ_ _3ak8Rd _2y8Yzt'] [class='_3sdu8W emupdz']");
+        this.categoriesTopicsLocator = page.locator("[class='_3sdu8W emupdz'] [class='YBLJE4']");
+        this.electronicsTabLocator = page.locator("[aria-label='Electronics']");
+        this.bestDealPhoneHeadingLocator = page.locator("[class='_1yQHx8 _2UnIQ_ _3ak8Rd _1kAmyc'] [class='_58bkzq7s _3n8fnaug _3n8fnamv _3n8fnaf9 _3n8fna1 _3n8fna7n _58bkzqn _1i2djtb9 _1i2djt0']");
+        this.bestDealViewAllButtonLocator = page.locator("[class='_1yQHx8 _2UnIQ_ _3ak8Rd _1kAmyc'] [class*='_1i2djtg0']");
+        this.bestDealIteamsLocator = page.locator("[class='_1yQHx8 _2UnIQ_ _3ak8Rd _1kAmyc'] [class='css-175oi2r']");
+        this.featuredBrandHeadingLocator = page.locator("[class='_1yQHx8 _2UnIQ_ _3ak8Rd _2y8Yzt'] [class*='_58bkzq62 _3n8fnaug _3n8fnamv _3n8fnaf9 _3n8fna1 _3n8fna7n _58bkzqh']");
+        this.featuredIteamsLocator = page.locator("[class='css-175oi2r'] [class='tLbyDf'] [class='zlQd20 ']");
+        this.smartGadgetsHeadingLocator = page.getByRole('link', { name: 'Smart Gadgets' });
+        this.smartGadgetViewAllLocator = page.locator("[data-observerid-bd15a11e-ce2a-4007-8ee6-2e074d2dd3d7='f89f38fe-b074-4182-8254-ab2d4ee2092a'] [class*=' _3n8fna1 _3n8fna7n _1i2djtb9 _1i2djt0 _9nihix7c']");
+        this.smartGadgetIteamsLocator = page.locator("[class='_3n8fnaug _3n8fnars _3n8fnak6 _3n8fna4y _3n8fnack _1i2djtb9 _1i2djtk9 _1i2djti0 _1i2djt9f _1i2djt76 _1i2djtdi _1i2djtfr _1i2djt2o _1i2djt4x'] [class='_25HC_u']");
+        this.bestGiftinCollectionLocator = page.locator("[class='css-175oi2r r-13awgt0 r-eqz5dr'] [class='_58bkzq8b _3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _58bkzqo _1i2djtb9 _1i2djt0']", {hasText: 'Best Gifting Collection'});
+        this.bestGiftViewAllButtonLocator = page.locator("[class='_3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _1i2djtb9 _1i2djt0 _1i2djt9x _1i2djt7o _1i2djt36 _1i2djt5f'] [class='_3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _1i2djtb9 _1i2djt0 _9nihix7u']");
+        this.bestGiftIeamsLocator = page.locator("[class='css-175oi2r'] [class='grid-formation grid-column-2']");
+        this.recentlyViewedHeadingLocator = page.locator("[class='_3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _1i2djtb9 _1i2djt0'] [class='_58bkzq63 _3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _58bkzqi _1i2djtb9 _1i2djt0']")
+        this.recentlyViewedViewAllButtonLocator = page.locator("[class='_3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _1i2djtb9 _1i2djt0 _1i2djt9x _1i2djt7o _1i2djt36 _1i2djt5f'] [class='_3n8fnawg _3n8fnaod _3n8fnag9 _3n8fna1 _3n8fna85 _1i2djtb9 _1i2djt0 _9nihix7u']");
+        this.rightNextButtonLocator = page.locator("[class='_5GBmrW']");
+        this.leftNextButtonLocator = page.locator("[class='_1JY_i0']");
 
 
     }
+
     async navigateToUrl(){
         await this.page.goto(pageURL);
         await this.page.waitForLoadState();
     }
-    async clickOnMobileTab(){
-        await this.mobileLocator.click();
+
+    async verfiyFlipkartIcon(){
+        await expect(this.flipkartIconLocator).toBeVisible();
     }
 
-    async verifyTitleHeadingOfSPhone(){
-        await (this.samsungHeading).isVisible();
+    async verifySearchBar(){
+        await expect(this.flipkartSearchBarLocator).toBeVisible();
+        await expect(this.flipkartSearchBarTextLocator).toBeVisible();  
+        await expect(this.flipkartSearchMagnifierLocator).toBeVisible();
     }
 
-    async verfiySamsungPhoneDeatails(){
-        await (this.samsungPhoneLocator).isVisible();
-        await (this.samsungPhoneTextLocator).isVisible();
-        await (this.samsungPhoneRating).isVisible();
-        await (this.samaungPhoneNewPrice).isVisible();
-        await (this.samsungPhoneOldPrice).isVisible();
-        await (this.discountOnSamsungPhone).isVisible();
-        await (this.samsungviewAllButton).isVisible();
-        const samsungPhones = await this.allSamsungPhonesLocator.count();
+    async verifyLoginButton(){
+        await expect(this.flipkartLoginButtonLocator).toBeVisible();
+        await expect(this.flipkartLoginDropDownButtonLocator).toBeVisible();
+    }
 
-        for(let i =0; i< samsungPhones; i++)
+    async verifyCartButton(){
+        await expect(this.cartLogoLocator).toBeVisible();
+        await expect(this.cartTextLocator).toHaveText('Cart');
+    }
+
+    async verifyBecomeASellerSection(){
+        await expect(this.becomeSellerIconLocator).toBeVisible();
+        await expect(this.becomesellerTextLocator).toHaveText('Become a Seller');
+    }
+
+    async verifyVerticalDots(){
+        await expect(this.verticalDotLocator).toBeVisible();
+    }
+
+    async verifyCategoriesHeading(){
+        await this.categoriesLocator.isVisible(); 
+        const allTopics = await this.categoriesTopicsLocator.count();
+
+        for(let i =0; i<allTopics; i++)
         {
-            await (this.allSamsungPhonesLocator.nth(i)).isVisible();
-        }        
-    }
-
-    async verifyTitleHeadingOfApplePhone(){
-
-        await (this.appleHeadingLocator).isVisible();
-    }
-
-    async verifyApplePhoneDetails(){
-        await (this.applePhoneLocator).isVisible();
-        await (this.applePhoneTextLocator).isVisible();
-        await (this.applePhoneRating).nth(1).isVisible();
-        await (this.applePhoneNewPrice).isVisible();
-        await (this.applePhoneOldPrice).isVisible();
-        await (this.discountOnApplePhone).isVisible();
-        await (this.appleViewAllButton).isVisible();
-        const applePhones = await this.allApplePhoneLocator.count();
-
-        for(let i =0; i<applePhones; i++)
-        {
-            await (this.allApplePhoneLocator.nth(i)).isVisible();
+            await expect(this.categoriesTopicsLocator.nth(i)).toBeVisible();
         }
     }
 
+    async verifyElectronicsItems(){
+        await this.electronicsTabLocator.hover();        
+    }
+
+    async verifyBannerNextButton(){
+        await expect(this.rightNextButtonLocator).toBeVisible();
+        await expect(this.leftNextButtonLocator).toBeVisible();    
+    }
+
+    async verifyBestDealSection(){
+        await (this.bestDealPhoneHeadingLocator).isVisible();
+        await (this.bestDealViewAllButtonLocator).isVisible();
+        const iteamsOfBestDeal = await this.bestDealIteamsLocator.count();
+
+        for(let i=0; i<iteamsOfBestDeal; i++)
+        {
+            await expect(this.bestDealIteamsLocator.nth(i)).toBeVisible();
+        }       
+    }
+
+    async verifyFeaturedBrandSection(){
+        await (this.featuredBrandHeadingLocator).nth(0).isVisible();
+        const allFeaturedIteams = await (this.featuredIteamsLocator).nth(0).count();
+        for(let i=0; i<allFeaturedIteams; i++)
+        {
+            await (this.featuredIteamsLocator.nth(i)).nth(0).isVisible();
+        }
+    }
+
+    async verifySmartGadgetsSection(){
+        await (this.smartGadgetsHeadingLocator).isVisible();
+        await (this.smartGadgetViewAllLocator).isVisible();
+    }
+
+    async verifyBestGiftingCollectionSection(){
+        await this.bestGiftinCollectionLocator.isVisible();
+        await (this.bestGiftViewAllButtonLocator).nth(2).isVisible();
+        await (this.bestGiftIeamsLocator).nth(0).isVisible();
+    }
+
+    async verfiyRecentlyViewedSection(){
+        await (this.recentlyViewedHeadingLocator).nth(4).isVisible();
+        await (this.recentlyViewedViewAllButtonLocator).nth(7).isVisible();
+    }
 
 
 
 
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
